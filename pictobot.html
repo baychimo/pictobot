@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Pictobot.core &#8212; Pictobot 0.2.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Pictobot" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-pictobot.core">
+<span id="pictobot-core"></span><h1>Pictobot.core<a class="headerlink" href="#module-pictobot.core" title="Permalink to this headline">¶</a></h1>
+<p>Pictobot is a <a class="reference external" href="https://www.telegram.org/">Telegram</a> Bot, that is, a
+<a class="reference external" href="https://en.wikipedia.org/wiki/Chatterbot">conversational program</a>.
+It is designed to help you communicate while you are traveling abroad.</p>
+<dl class="function">
+<dt id="pictobot.core.browse">
+<code class="descclassname">pictobot.core.</code><code class="descname">browse</code><span class="sig-paren">(</span><em>bot</em>, <em>update</em><span class="sig-paren">)</span><a class="headerlink" href="#pictobot.core.browse" title="Permalink to this definition">¶</a></dt>
+<dd><p>/browse command. Displays a keyboard/buttons UI for navigation.</p>
+<p>Catalog-like UI where the user can browse through different categories of
+pictograms.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bot</strong> (<em>object</em>) – the bot instance.</p></li>
+<li><p><strong>update</strong> (<em>object</em>) – the message sent by the user.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pictobot.core.build_keyboard">
+<code class="descclassname">pictobot.core.</code><code class="descname">build_keyboard</code><span class="sig-paren">(</span><em>kb_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#pictobot.core.build_keyboard" title="Permalink to this definition">¶</a></dt>
+<dd><p>Builds a keyboard/buttons object from a dict</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>kbdict</strong> (<em>dict</em>) – dict of buttons to display on the keyboard</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A keyboard formated for Telegram (InlineKeyboardMarkup)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pictobot.core.cmd_search">
+<code class="descclassname">pictobot.core.</code><code class="descname">cmd_search</code><span class="sig-paren">(</span><em>bot</em>, <em>update</em>, <em>args</em><span class="sig-paren">)</span><a class="headerlink" href="#pictobot.core.cmd_search" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>_/search_</strong> command</p>
+<p>User typed /search command. Either with some search query behind it. Or
+without any text, in which case we ask her/him to type his/her query.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bot</strong> – (object) the bot instance.</p></li>
+<li><p><strong>update</strong> – (object) the message sent by the user.</p></li>
+<li><p><strong>args</strong> – (list) search query typed by the user.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pictobot.core.dispatch">
+<code class="descclassname">pictobot.core.</code><code class="descname">dispatch</code><span class="sig-paren">(</span><em>bot</em>, <em>update</em><span class="sig-paren">)</span><a class="headerlink" href="#pictobot.core.dispatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handling of callbacks from inline keyboards</p>
+<p>Either send back another keyboard, a pictogram, or an error message</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bot</strong> (<em>object</em>) – the bot instance.</p></li>
+<li><p><strong>update</strong> (<em>object</em>) – the message sent by the user.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pictobot.core.error">
+<code class="descclassname">pictobot.core.</code><code class="descname">error</code><span class="sig-paren">(</span><em>bot</em>, <em>update</em>, <em>error</em><span class="sig-paren">)</span><a class="headerlink" href="#pictobot.core.error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Logs errors.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pictobot.core.fuzzy_search">
+<code class="descclassname">pictobot.core.</code><code class="descname">fuzzy_search</code><span class="sig-paren">(</span><em>query</em>, <em>limit=7</em><span class="sig-paren">)</span><a class="headerlink" href="#pictobot.core.fuzzy_search" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fuzzy search the dict containing the search keywords</p>
+<p>Return best results sorted by score, descending.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>string</em>) – the user’s search strings.</p></li>
+<li><p><strong>limit</strong> (<em>int</em>) – number of results to return.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of results sorted by score and simple_ratio(fuzz.ratio)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pictobot.core.help">
+<code class="descclassname">pictobot.core.</code><code class="descname">help</code><span class="sig-paren">(</span><em>bot</em>, <em>update</em><span class="sig-paren">)</span><a class="headerlink" href="#pictobot.core.help" title="Permalink to this definition">¶</a></dt>
+<dd><p>/help command. Displays help message to the user.</p>
+<p>The user either used the /help command or is being sent here after getting
+lost. A helpful message is displayed, and a reminder button that the
+inline query mode is available.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bot</strong> (<em>object</em>) – the bot instance.</p></li>
+<li><p><strong>update</strong> (<em>object</em>) – the message sent by the user.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pictobot.core.inline_search">
+<code class="descclassname">pictobot.core.</code><code class="descname">inline_search</code><span class="sig-paren">(</span><em>bot</em>, <em>update</em><span class="sig-paren">)</span><a class="headerlink" href="#pictobot.core.inline_search" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inline search function: called everytime the user types a character.</p>
+<p>This type of search is only functionning when the image folders are on a
+web server, Telegram expects proper URLs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bot</strong> (<em>object</em>) – the bot instance.</p></li>
+<li><p><strong>update</strong> (<em>object</em>) – the message sent by the user.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pictobot.core.main">
+<code class="descclassname">pictobot.core.</code><code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pictobot.core.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declaring handlers, start polling or webhook.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pictobot.core.quick_search">
+<code class="descclassname">pictobot.core.</code><code class="descname">quick_search</code><span class="sig-paren">(</span><em>bot</em>, <em>update</em><span class="sig-paren">)</span><a class="headerlink" href="#pictobot.core.quick_search" title="Permalink to this definition">¶</a></dt>
+<dd><p>User types his/her query directly (no command)</p>
+<p>User being rerouted to classic search function, it’s just a wrapper really.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bot</strong> – (object) the bot instance.</p></li>
+<li><p><strong>update</strong> – (object) the message sent by the user.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pictobot.core.sanitize_string">
+<code class="descclassname">pictobot.core.</code><code class="descname">sanitize_string</code><span class="sig-paren">(</span><em>query</em><span class="sig-paren">)</span><a class="headerlink" href="#pictobot.core.sanitize_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clean up user input</p>
+<p>Remove unwanted characters from strings and convert uppercase caharacters
+before search: for better scores on Levenshtein distances.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>query</strong> (<em>string</em>) – the user’s search strings.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A sanitized string.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>string</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pictobot.core.search">
+<code class="descclassname">pictobot.core.</code><code class="descname">search</code><span class="sig-paren">(</span><em>bot</em>, <em>update</em>, <em>raw_query</em><span class="sig-paren">)</span><a class="headerlink" href="#pictobot.core.search" title="Permalink to this definition">¶</a></dt>
+<dd><p>Search function</p>
+<p>Clean up the search query via sanitize_string function, get results from
+fuzzy_search function. Either return results as a keyboard or display a
+“not found” message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bot</strong> (<em>object</em>) – the bot instance.</p></li>
+<li><p><strong>update</strong> (<em>object</em>) – the message sent by the user.</p></li>
+<li><p><strong>raw_query</strong> (<em>list</em>) – search query typed by the user.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pictobot.core.send_picto">
+<code class="descclassname">pictobot.core.</code><code class="descname">send_picto</code><span class="sig-paren">(</span><em>bot</em>, <em>chat_id</em>, <em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#pictobot.core.send_picto" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends a pictogram to the user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bot</strong> (<em>object</em>) – the bot instance.</p></li>
+<li><p><strong>chat_id</strong> (<em>str</em>) – the id of the chat where the picto must be sent.</p></li>
+<li><p><strong>text</strong> (<em>str</em>) – the key of the dict corresponding to the picto to send.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pictobot.core.settings">
+<code class="descclassname">pictobot.core.</code><code class="descname">settings</code><span class="sig-paren">(</span><em>bot</em>, <em>update</em><span class="sig-paren">)</span><a class="headerlink" href="#pictobot.core.settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>/settings command. Not implemented yet. Not advertised to BotFather
+either.</p>
+<p>Displays a joke message if anyone ever tries this command until it’s
+implemented.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bot</strong> (<em>object</em>) – the bot instance.</p></li>
+<li><p><strong>update</strong> (<em>object</em>) – the message sent by the user.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pictobot.core.start">
+<code class="descclassname">pictobot.core.</code><code class="descname">start</code><span class="sig-paren">(</span><em>bot</em>, <em>update</em>, <em>args</em><span class="sig-paren">)</span><a class="headerlink" href="#pictobot.core.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>/start command. Displays welcome message.</p>
+<p>Displays a welcome message and a help message (via a triggered /help
+command). If the user is sent here after an unsuccessful inline search a
+hopefully helpful message is shown.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bot</strong> (<em>object</em>) – the bot instance.</p></li>
+<li><p><strong>update</strong> (<em>object</em>) – the message sent by the user.</p></li>
+<li><p><strong>args</strong> (<em>tuple</em>) – search terms.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pictobot.core.unknown_command">
+<code class="descclassname">pictobot.core.</code><code class="descname">unknown_command</code><span class="sig-paren">(</span><em>bot</em>, <em>update</em><span class="sig-paren">)</span><a class="headerlink" href="#pictobot.core.unknown_command" title="Permalink to this definition">¶</a></dt>
+<dd><p>Where the unknown commands come to die.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bot</strong> (<em>object</em>) – the bot instance.</p></li>
+<li><p><strong>update</strong> (<em>object</em>) – the message sent by the user.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pictobot.core.unknown_type">
+<code class="descclassname">pictobot.core.</code><code class="descname">unknown_type</code><span class="sig-paren">(</span><em>bot</em>, <em>update</em><span class="sig-paren">)</span><a class="headerlink" href="#pictobot.core.unknown_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unknown -Telegram- type handler.</p>
+<p>The bot only accepts text input. If any other data type is sent, it is
+rejected.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bot</strong> (<em>object</em>) – the bot instance.</p></li>
+<li><p><strong>update</strong> (<em>object</em>) – the message sent by the user.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Pictobot</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Pictobot.core</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Pictobot</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Jonathan Guitton.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/pictobot.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
