@@ -16,6 +16,7 @@ The contest was a good opportunity to learn about chatbots and pictograms.
 - [Running the tests](#running-the-tests)
 - [Deployment](#deployment)
 - [Built With](#built-with)
+- [Docs](#docs)
 - [Contributing](#contributing)
 - [Author](#author)
 - [License](#license)
@@ -99,6 +100,10 @@ If you are in a hurry, start by the [great wiki of the Python Telegram Bot](http
 - [Python-Telegram-Bot](https://github.com/python-telegram-bot/python-telegram-bot) - The excellent Telegram Bot framework, making it very easy to get started with Telegram. Their docs are good and they are very helpful on their Telegram group too. Highly recommended!
 - [FuzzyWuzzy](https://github.com/seatgeek/fuzzywuzzy) - "Fuzzy string matching like a boss". That says it all.
 - [The Noun Project](https://thenounproject.com/) - All the images used by the bot were downloaded from the noun project website before being adapted into pictograms with [inkscape](https://inkscape.org/), the credits are listed below.
+
+## Docs
+
+The docstring generated docs are in the gh-pages branch. They are published here: [baychimo.github.io/pictobot](https://baychimo.github.io/pictobot/)
 
 ## Contributing
 
