@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "pictobot"
+version = "0.1.0"
+description = "A helpful bot showing you pictograms when you're lost in translation"
+authors = ["Jonathan Guitton"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+python-telegram-bot = "^11.1"
+fuzzywuzzy = "^0.17.0"
+python-levenshtein = "^0.12.0"
+
+[tool.poetry.dev-dependencies]
+pylint = "^2.3"
+pytest = "^4.5"
+hypothesis = "^4.23"
+sphinx = "^2.0"
+telethon = "^1.7"
+cryptg = "^0.1.0"
+pillow = "^6.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
