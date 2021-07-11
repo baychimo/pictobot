@@ -89,11 +89,15 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [[package]]
 name = "cryptg"
-version = "0.1.0.7"
-description = "Cryptographic utilities for Telegram"
+version = "0.2.post4"
+description = "Cryptographic utilities for Telegram."
 category = "dev"
 optional = false
-python-versions = "*"
+python-versions = ">=3.6"
+
+[package.dependencies]
+cffi = ">=1.0.0"
+pycparser = "*"
 
 [[package]]
 name = "cryptography"
@@ -581,7 +585,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "653b60d45323b0745bcca2b48f6a9cc4fc56ce21e03f87437892f1c247f964e2"
+content-hash = "aa23e96a1a6d497c6cc61e3f4a0710a707a633b2774718d5e2feeaa7f1afcede"
 
 [metadata.files]
 alabaster = [
@@ -647,9 +651,40 @@ colorama = [
     {file = "colorama-0.4.1.tar.gz", hash = "sha256:05eed71e2e327246ad6b38c540c4a3117230b19679b875190486ddd2d721422d"},
 ]
 cryptg = [
-    {file = "cryptg-0.1.0.7-cp36-cp36m-win_amd64.whl", hash = "sha256:40d82dbbcab0db8cb4bb042c7c389587004d25f889aabef8216ef5045faad9f7"},
-    {file = "cryptg-0.1.0.7-cp37-cp37m-win_amd64.whl", hash = "sha256:7a7d458278a93eb74caff5299b70d95e9f240bcd6a38600d7b8b7cee64a1248f"},
-    {file = "cryptg-0.1.0.7.tar.gz", hash = "sha256:3e15455c337abbd06dbf2677955082a90fcd42c2ad39590d4205fe201d24cc2c"},
+    {file = "cryptg-0.2.post4-cp36-cp36m-macosx_10_6_intel.whl", hash = "sha256:b6352555e47f389ed502269bdb537233d0a928b12d9f4caa57e8c707151acd30"},
+    {file = "cryptg-0.2.post4-cp36-cp36m-manylinux1_i686.whl", hash = "sha256:7fc8e1893775c6f53dceda1959f19833cc27a67a80492c10e2415dc601b36650"},
+    {file = "cryptg-0.2.post4-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:2516557e89803637fa7342de43dbcc5f84bf68ae05b1064a354a62d423447d9f"},
+    {file = "cryptg-0.2.post4-cp36-cp36m-manylinux2010_i686.whl", hash = "sha256:c09a5b14494532fc3226f5c5f57ef2a651c935ed6a1d2d0f9eff110046725524"},
+    {file = "cryptg-0.2.post4-cp36-cp36m-manylinux2010_x86_64.whl", hash = "sha256:eff15f0a1eee678dd9ec747b58ce86edb78b608036ac4e02d8349f5f35202495"},
+    {file = "cryptg-0.2.post4-cp36-cp36m-win32.whl", hash = "sha256:72a5485ece10a70160170ceb658b1836db82dccab08a1f7029c54d81cf6b1d43"},
+    {file = "cryptg-0.2.post4-cp36-cp36m-win_amd64.whl", hash = "sha256:29001dafd3d6a054365222b1f89b12876723c89cdd10aa0e5885a05dfd034eeb"},
+    {file = "cryptg-0.2.post4-cp37-cp37m-macosx_10_6_intel.whl", hash = "sha256:307bf96a6ac9c87b44531d8da5fe3a6c5d856e1dc69b68136ef9c4fb66ad17ac"},
+    {file = "cryptg-0.2.post4-cp37-cp37m-manylinux1_i686.whl", hash = "sha256:47ad5916be4558f4d674c12800e8d9663ce938b0046f19cdc869ba3a7ca280ec"},
+    {file = "cryptg-0.2.post4-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:6c5d66975fc59adca203fa91e2a104240457114468162d30e9213661239ac1d6"},
+    {file = "cryptg-0.2.post4-cp37-cp37m-manylinux2010_i686.whl", hash = "sha256:bf00943924cddb0838f8a65f5aae31f6fe2ad64a5d7e6f10a6b900b3f01b0ae0"},
+    {file = "cryptg-0.2.post4-cp37-cp37m-manylinux2010_x86_64.whl", hash = "sha256:135688c6fbda90748924c2cb047f63785ebf4397d81acc4a05357950653c5096"},
+    {file = "cryptg-0.2.post4-cp37-cp37m-win32.whl", hash = "sha256:46960979542155c9d903656a3a39770061b09a3691a23296f06dc168fe4ff962"},
+    {file = "cryptg-0.2.post4-cp37-cp37m-win_amd64.whl", hash = "sha256:ce08c04ebb06ce1ac417597c1bb514a3c1b36cf5c286b8c60f23df2e65703bf3"},
+    {file = "cryptg-0.2.post4-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:695636cca0ee938bd7113658ee60bfaf89afa19708c40ecae5f4a222c2ec544a"},
+    {file = "cryptg-0.2.post4-cp38-cp38-manylinux1_i686.whl", hash = "sha256:1fb6c6d4561a54406593197c1f5f23662ab320f4af4ab11834e1583e9d27a49a"},
+    {file = "cryptg-0.2.post4-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:bbd05b52d09e78bdc595f229c0481f4f2e1daf3959847322a6b2c1f76119305f"},
+    {file = "cryptg-0.2.post4-cp38-cp38-manylinux2010_i686.whl", hash = "sha256:c4812802ce4cd6f08189ce0fa8b79e9a96ac941e69e6b3032bb6908baefde2ba"},
+    {file = "cryptg-0.2.post4-cp38-cp38-manylinux2010_x86_64.whl", hash = "sha256:c69c1e19884108e508697919de0cd43e2ca4e9af418962aa235273b3c51a0e37"},
+    {file = "cryptg-0.2.post4-cp38-cp38-win32.whl", hash = "sha256:e29b0d944176cf88fe52d1c58f46017b5bddc9cc54ec0fc6fac20043febefc32"},
+    {file = "cryptg-0.2.post4-cp38-cp38-win_amd64.whl", hash = "sha256:5faed49d972c7f44ce4d6fa1a64169c85a11209fa1fbe1c8a333fb1454888725"},
+    {file = "cryptg-0.2.post4-cp39-cp39-manylinux1_i686.whl", hash = "sha256:b8896394b72ff7dbf38072ad4c2cd59abdd9e388bb55e1c369102beb8e569f9d"},
+    {file = "cryptg-0.2.post4-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:e48ab84e0ed364436d5e449c59762c5963f08ad87f6508f4cb7644745b5559a8"},
+    {file = "cryptg-0.2.post4-cp39-cp39-manylinux2010_i686.whl", hash = "sha256:0da1b367056e57a5c01d22608da0cd50e597b917c1b2d9631767aa3c0640a99a"},
+    {file = "cryptg-0.2.post4-cp39-cp39-manylinux2010_x86_64.whl", hash = "sha256:31cf7682de69022c9a77739cdcf7116b06522b128b9b51c7593f277f38c38dbf"},
+    {file = "cryptg-0.2.post4-cp39-cp39-win32.whl", hash = "sha256:02b31622a75a49a5dcd25e589c85faae54575f018e055bd21a17df97c8bb9095"},
+    {file = "cryptg-0.2.post4-cp39-cp39-win_amd64.whl", hash = "sha256:3bc2f372dec3a7753c0c0d72c69fcbe44af5473f870a3406978e07e8560a1aa6"},
+    {file = "cryptg-0.2.post4-pp36-pypy36_pp73-manylinux1_x86_64.whl", hash = "sha256:a1fb178702730b59267f1e6c6dfe16c7bb9c1350cee4183221982ad2dba4e7f5"},
+    {file = "cryptg-0.2.post4-pp36-pypy36_pp73-manylinux2010_x86_64.whl", hash = "sha256:2cc8115960e49a038091ffb2d09de59e0acbdc76de10d7d415b7671a06bae0a9"},
+    {file = "cryptg-0.2.post4-pp36-pypy36_pp73-win32.whl", hash = "sha256:bf15aae0fa01aeec728ab16b920cf4c6b2793099c71f62f30ff100d6fe8c9859"},
+    {file = "cryptg-0.2.post4-pp37-pypy37_pp73-manylinux1_x86_64.whl", hash = "sha256:890584db41c8e1e046ae40dee0074614470d36ebd6b7e57bb91303300066601f"},
+    {file = "cryptg-0.2.post4-pp37-pypy37_pp73-manylinux2010_x86_64.whl", hash = "sha256:fdd62c2be23eeabb9ebd2ad41bf153f5ec48b968885ef14e676515407cd56339"},
+    {file = "cryptg-0.2.post4-pp37-pypy37_pp73-win32.whl", hash = "sha256:2cd8224eb64af756f45cdceab16d048494313db8acec1e38d75d97716082267b"},
+    {file = "cryptg-0.2.post4.tar.gz", hash = "sha256:a4de1730ca56aa8a945f176c25586901ed5e9f15ffb70c6459eedf466eb6299b"},
 ]
 cryptography = [
     {file = "cryptography-3.2-cp27-cp27m-macosx_10_10_x86_64.whl", hash = "sha256:9a8580c9afcdcddabbd064c0a74f337af74ff4529cdf3a12fa2e9782d677a2e5"},
