@@ -18,7 +18,7 @@ hypothesis = "^4.23"
 sphinx = "^2.0"
 telethon = "^1.7"
 cryptg = "^0.1.0"
-pillow = "^7.1"
+pillow = "^8.2"
 
 [build-system]
 requires = ["poetry>=0.12"]
