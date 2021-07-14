@@ -16,7 +16,7 @@ pylint = "^2.3"
 pytest = "^4.5"
 hypothesis = "^4.23"
 sphinx = "^2.0"
-telethon = "^1.7"
+telethon = "^1.23"
 cryptg = "^0.2.post4"
 pillow = "^8.2"
 
