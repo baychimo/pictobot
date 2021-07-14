@@ -7,7 +7,7 @@ license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.7"
-python-telegram-bot = "^11.1"
+python-telegram-bot = "^13.7"
 fuzzywuzzy = "^0.18.0"
 python-levenshtein = "^0.12.2"
 
