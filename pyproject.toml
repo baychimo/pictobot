@@ -12,7 +12,7 @@ fuzzywuzzy = "^0.18.0"
 python-levenshtein = "^0.12.2"
 
 [tool.poetry.dev-dependencies]
-pylint = "^2.3"
+pylint = "^2.9"
 pytest = "^4.5"
 hypothesis = "^4.23"
 sphinx = "^2.0"
