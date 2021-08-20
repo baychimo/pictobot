@@ -15,7 +15,7 @@ fuzzywuzzy==0.17.0
 hypothesis==4.23.6
 idna==3.2
 imagesize==1.1.0
-isort==5.9.2
+isort==5.9.3
 jinja2>=2.11.3
 lazy-object-proxy==1.4.1
 MarkupSafe==2.0.1
