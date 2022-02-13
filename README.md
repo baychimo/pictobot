@@ -1,3 +1,5 @@
+This repository is now archived, use at your own risk (update dependencies first, if you ever use this)
+
 [![Screenshots of a conversation with the Pictobot](https://raw.githubusercontent.com/baychimo/pictobot/master/screenshots/sample_pictograms_sm.png "Screenshots of a conversation with the Pictobot")](https://raw.githubusercontent.com/baychimo/pictobot/master/screenshots/sample_pictograms_lg.png)
 
 # Pictobot
